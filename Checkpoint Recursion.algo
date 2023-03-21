@@ -1,0 +1,7 @@
+function is_palindrome(word):
+    if length(word) <= 1:
+        return true   // Stop condition: empty word or single character is a palindrome
+    else if word[0] == word[length(word)-1]:
+        return is_palindrome(substring(word, 1, length(word)-2))  // Recursively test the rest of the word
+    else:
+        return false  // Stop if there's a difference
